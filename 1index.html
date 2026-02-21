@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="topnav">
+        <a class="active" href="index.html">HOME</a>
+        <a href="#placeholder">About Us</a>
+        <a href="#placeholder">Gallery</a>
+        <a href="#placeholder">Contact Us</a>
+    </div>
+        <section>
+            <img class="mySlides" src="toothless.jpg"style="height:500px">
+            <img class="mySlides" src="s-l1600.jpeg"style="height:500px">
+            <img class="mySlides" src="s-l1600 2.jpeg"style="height:500px">
+            <img class="mySlides" src="s-l1600 3.jpeg"style="height:500px">
+        </section>
+        <script>
+
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x =document.getElementsByClassName("mySlides");
+
+            for (i = 0; i < x.length; i++){
+                x[i].style.display ="none"; 
+            }
+            myIndex++;
+            if(myIndex > x.length) {myIndex = 1}
+            x[myIndex-1].style.display = "block";
+            setTimeout(carousel, 3000);
+        }
+    </script>
+</body>
+</html>  
